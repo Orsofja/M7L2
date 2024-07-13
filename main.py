@@ -59,16 +59,16 @@ async def picture(ctx):
             fileurl = attachment.url
             attachment.save(f'images/{filename}')
             await ctx.send(f'картинка успешно сохранена в images/{filename}')
-            name = car_classifier(filename)
+            name = car_classifier(/images/filename)
             await ctx.send(name)
             if name == 'BMW':
-                await ctx.send(f'На картинке BMW')
-            if name == 'Ferrari':
-                await ctx.send(f'На картинке Ferrari')
-            if name == 'Lamborgini':
-                await ctx.send(f'На картинке Lamborgini')
+                await ctx.send(f'На картинке BMW. BMW может стоить от 38 600 до 62 200 долларов , в зависимости от выбранного вами типа и уровня комплектации.')
+            elif name == 'Ferrari':
+                await ctx.send(f'На картинке Ferrari. Может стоить от 350000 до 600000 долларов , в зависимости от выбранного вами типа и уровня комплектации.')
+            elif name == 'Lamborgini':
+                await ctx.send(f'На картинке Lamborgini. Может стоить от 300000 до 500000 долларов , в зависимости от выбранного вами типа и уровня комплектации.')
             else:
-                await ctx.send(f'На картинке марка автомобиля, которой нету в базе')
+                await ctx.send(f'Что то пошло не так')
 
     else:
         await ctx.send(f'картинка не найдена')
